@@ -1,13 +1,13 @@
 {
-  "name": "@cypress/request",
-  "description": "Cypress's fork of a simplified HTTP request client.",
+  "name": "@search-dump/request",
+  "description": "Simplified HTTP request client.",
   "keywords": [
     "http",
     "simple",
     "util",
     "utility"
   ],
-  "version": "0.0.0-development",
+  "version": "2.88.1",
   "author": "Mikeal Rogers <mikeal.rogers@gmail.com>",
   "repository": {
     "type": "git",
