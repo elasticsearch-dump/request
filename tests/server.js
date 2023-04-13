@@ -54,7 +54,7 @@ exports.createSSLServer = function (opts) {
   }
 
   for (i in options) {
-    if (i !== 'requestCert' && i !== 'rejectUnauthorized' && i !== 'ciphers') {
+    if (i !== 'requestCert' && i !== 'rejectUnauthorized' && i !== 'allowInsecureRedirect' && i !== 'ciphers') {
       options[i] = fs.readFileSync(options[i])
     }
   }
