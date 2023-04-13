@@ -1,22 +1,9 @@
-# Deprecated!
-
-As of Feb 11th 2020, request is fully deprecated. No new changes are expected to land. In fact, none have landed for some time.
-
-For more information about why request is deprecated and possible alternatives refer to
-[this issue](https://github.com/request/request/issues/3142).
-
-# @cypress/request - Simplified HTTP client
-
-[![npm package](https://nodei.co/npm/@cypress/request.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/@cypress/request/)
-
-**This is a fork of [`request`](https://github.com/request/request) for use in [Cypress](https://github.com/cypress-io/cypress).**
-
 ## Super simple to use
 
 Request is designed to be the simplest way possible to make http calls. It supports HTTPS and follows redirects by default.
 
 ```js
-const request = require('@cypress/request');
+const request = require('@search-dump/request');
 request('http://www.google.com', function (error, response, body) {
   console.error('error:', error); // Print the error if one occurred
   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
@@ -348,7 +335,7 @@ of stars and forks for the request repository. This requires a
 custom `User-Agent` header as well as https.
 
 ```js
-const request = require('request');
+const request = require('@search-dump/request');
 
 const options = {
   url: 'https://api.github.com/repos/cypress-io/request',
@@ -520,7 +507,7 @@ const fs = require('fs')
     , certFile = path.resolve(__dirname, 'ssl/client.crt')
     , keyFile = path.resolve(__dirname, 'ssl/client.key')
     , caFile = path.resolve(__dirname, 'ssl/ca.cert.pem')
-    , request = require('request');
+    , request = require('@search-dump/request');
 
 const options = {
     url: 'https://api.some-server.com/',
@@ -543,7 +530,7 @@ const fs = require('fs')
     , path = require('path')
     , certFile = path.resolve(__dirname, 'ssl/client.crt')
     , keyFile = path.resolve(__dirname, 'ssl/client.key')
-    , request = require('request');
+    , request = require('@search-dump/request');
 
 const options = {
     url: 'https://api.some-server.com/',
@@ -616,7 +603,7 @@ The `options.har` property will override the values: `url`, `method`, `qs`, `hea
 A validation step will check if the HAR Request format matches the latest spec (v1.2) and will skip parsing if not matching.
 
 ```js
-  const request = require('request')
+  const request = require('@search-dump/request')
   request({
     // will be ignored
     method: 'GET',
@@ -872,7 +859,7 @@ There are at least three ways to debug the operation of `request`:
 1. Launch the node process like `NODE_DEBUG=request node script.js`
    (`lib,request,otherlib` works too).
 
-2. Set `require('request').debug = true` at any time (this does the same thing
+2. Set `require('@search-dump/request').debug = true` at any time (this does the same thing
    as #1).
 
 3. Use the [request-debug module](https://github.com/cypress-io/request-debug) to
@@ -916,7 +903,7 @@ request.get('http://10.255.255.1', {timeout: 1500}, function(err) {
 ## Examples:
 
 ```js
-  const request = require('request')
+  const request = require('@search-dump/request')
     , rand = Math.floor(Math.random()*100000000).toString()
     ;
   request(
@@ -947,7 +934,7 @@ while the response object is unmodified and will contain compressed data if
 the server sent a compressed response.
 
 ```js
-  const request = require('request')
+  const request = require('@search-dump/request')
   request(
     { method: 'GET'
     , uri: 'http://www.google.com'
