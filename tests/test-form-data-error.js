@@ -64,7 +64,6 @@ tape('omit content-length header if the value is set to NaN', function (t) {
   })
 })
 
-
 tape('cleanup', function (t) {
   s.close(function () {
     t.end()
