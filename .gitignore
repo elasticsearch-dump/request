@@ -4,7 +4,6 @@ coverage
 npm-debug.log
 package-lock.json
 .nyc_output
-yarn.lock
 .vscode
 
 # emacs
